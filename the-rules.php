@@ -149,16 +149,16 @@ function rules_of_aquision_get_rule() {
 }
 
 // This just echoes the chosen line, we'll position it later
-function hello_dolly() {
+function rules_of_aquision() {
 	$chosen = rules_of_aquision_get_rule();
 	echo "<p id='dolly'>$chosen</p>";
 }
 
 // Now we set that function up to execute when the admin_notices action is called
-add_action( 'admin_notices', 'hello_dolly' );
+add_action( 'admin_notices', 'rules_of_aquision' );
 
 // We need some CSS to position the paragraph
-function dolly_css() {
+function rules_of_aquision_css() {
 	// This makes sure that the positioning is also good for right-to-left languages
 	$x = is_rtl() ? 'left' : 'right';
 
@@ -175,6 +175,6 @@ function dolly_css() {
 	";
 }
 
-add_action( 'admin_head', 'dolly_css' );
+add_action( 'admin_head', 'rules_of_aquision_css' );
 
 ?>
