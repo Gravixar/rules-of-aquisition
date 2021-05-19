@@ -151,7 +151,7 @@ function rules_of_aquision_get_rule() {
 // This just echoes the chosen line, we'll position it later
 function rules_of_aquision() {
 	$chosen = rules_of_aquision_get_rule();
-	echo "<p id='dolly'>$chosen</p>";
+	echo "<p id='ferengi_roq'>$chosen</p>";
 }
 
 // Now we set that function up to execute when the admin_notices action is called
@@ -164,7 +164,7 @@ function rules_of_aquision_css() {
 
 	echo "
 	<style type='text/css'>
-	#dolly {
+	#ferengi_roq {
 		float: $x;
 		padding-$x: 15px;
 		padding-top: 5px;		
@@ -176,5 +176,3 @@ function rules_of_aquision_css() {
 }
 
 add_action( 'admin_head', 'rules_of_aquision_css' );
-
-?>
